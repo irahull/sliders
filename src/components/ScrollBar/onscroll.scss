@@ -1,0 +1,88 @@
+.slider-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(211, 234, 255);
+    font-family: Poppins;
+    position: relative;
+    .slider-item{
+        min-width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        .slider-image{
+            width: 50%;
+            text-align: center;
+            img{
+                width: 300px;
+            }
+        }
+        .text{
+            width: 50%;
+            .slider-title{
+                width: 70%;
+                    font-size: 29px;
+                    margin: 10px 0px;
+                    font-weight: 500;
+            }
+            .slider-text{
+                width: 70%;
+            }
+        }
+    
+    }
+    .slider-item-hidden{
+        display: none;
+    }
+    .arrow-btn-right{
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 9px 16px;
+        border-radius: 999px;
+        font-size: 20px;
+        cursor: pointer;
+        filter: drop-shadow(0px 0px 5px #555);
+    }
+    .arrow-btn-left{
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        transform: translateY(-50%);
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 9px 16px;
+        border-radius: 999px;
+        font-size: 20px;
+        cursor: pointer;
+        filter: drop-shadow(0px 0px 5px #555);
+    }
+    .bottom-indicator{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        .indicator{
+            width: 7px;
+            height: 7px;
+            margin: 0px 5px;
+            border-radius: 100%;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 5px #555;
+            cursor: pointer;
+        }
+        .indicator-inactive{
+            background-color: gray;
+        }
+    }
+}
