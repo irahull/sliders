@@ -10,6 +10,16 @@ const OnScrollItsm = ({ data }) => {
     setCurrentIndex(currentIndex === data.length - 1 ? 0 : currentIndex + 1);
   };
 
+  const slidesStyle = {
+    width: "100%",
+    height: "100%",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    // backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,0.56)),url(${data[currentIndex].bg})`,
+    background:(`${data[currentIndex].bg}`),
+    transition: "linear 0.5s",
+  };
+
   return (
     <>
       <div className="slider-section">
@@ -25,6 +35,7 @@ const OnScrollItsm = ({ data }) => {
                   : "slider-item slider-item-hidden"
               }
               key={ind}
+              style={slidesStyle}
             >
               <div className="slider-image">
                 <img src={item.media.default} alt="Slider Image" />

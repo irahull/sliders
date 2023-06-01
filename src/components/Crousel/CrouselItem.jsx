@@ -25,21 +25,39 @@ const Slider = ({ slides }) => {
     left: "40px",
     color: "black",
     fontWeight: "500",
-    backgroundColor : "white",
-    padding : "10px 15px",
-    borderRadius : "999px"
+    backgroundColor: "white",
+    padding: "10px 15px",
+    borderRadius: "999px",
   };
   const rightIconStyle = {
     position: "absolute",
-    right : "40px",
+    right: "40px",
     top: "50%",
     transform: "translate(0%, -50%)",
     fontSize: "30px",
     color: "black",
     fontWeight: "500",
-    backgroundColor : "white",
-    padding : "10px 15px",
-    borderRadius : "999px"
+    backgroundColor: "white",
+    padding: "10px 15px",
+    borderRadius: "999px",
+  };
+
+  const sliderIndicator = {
+    position: "absolute",
+    bottom: "10px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    overflow: "hidden",
+  };
+
+  const indicatorStyle = {
+    margin: "0px 4px",
+    width: "8px",
+    height: "8px",
+    outline: "none",
+    border: "none",
+    borderRadius: "999px",
+    cursor: "pointer",
   };
 
   const previousImg = () => {
@@ -60,21 +78,24 @@ const Slider = ({ slides }) => {
 
   return (
     <div className="slider" style={sliderStyle}>
-      <div
-        className="left-icon"
-        style={leftIconStyle}
-        onClick={previousImg}
-      >
-         <i class="fa-solid fa-arrow-left"></i>
+      <div className="left-icon" style={leftIconStyle} onClick={previousImg}>
+        <i class="fa-solid fa-arrow-left"></i>
       </div>
-      <div
-        className="right-icon"
-        style={rightIconStyle}
-        onClick={nextImg}
-      >
+      <div className="right-icon" style={rightIconStyle} onClick={nextImg}>
         <i class="fa-solid fa-arrow-right"></i>
       </div>
       <div className="slider-main" style={slidesStyle}></div>
+      <div style={sliderIndicator}>
+        {slides.map((item, ind) => {
+          return (
+            <button
+              key={ind}
+              style={indicatorStyle}
+              onClick={() => setCurentSlide(ind)}
+            ></button>
+          );
+        })}
+      </div>
     </div>
   );
 };
