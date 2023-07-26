@@ -38,7 +38,7 @@ const OnScrollItsm = ({ data }) => {
               style={slidesStyle}
             >
               <div className="slider-image">
-                <img src={item.media.default} alt="Slider Image" />
+                <img src={item.media} alt="Slider Image" />
               </div>
               <div className="text">
                 <div className="slider-title">{item.title}</div>

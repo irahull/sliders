@@ -37,47 +37,47 @@ const CrouselItem = () => {
           className="slider">
 
           <Slide index={0}>
-            <img src={ImgOne} />
+            <img src={ImgOne}  alt="Nature"/>
           </Slide>
 
           <Slide index={1}>
-            <img src={ImgTwo} />
+            <img src={ImgTwo}  alt="Landscape"/>
           </Slide>
 
           <Slide index={2}>
-            <img src={ImgThree} />
+            <img src={ImgThree}  alt="Food"/>
           </Slide>
 
           <Slide index={3}>
-            <img src={ImgFour} />
+            <img src={ImgFour}  alt="Going to hell"/>
           </Slide>
 
           <Slide index={4}>
-            <img src={ImgFive} />
+            <img src={ImgFive} alt="You Idiot" />
           </Slide>
 
           <Slide index={5}>
-            <img src={ImgSix} />
+            <img src={ImgSix}  alt="Foody"/>
           </Slide>
 
           <Slide index={6}>
-            <img src={ImgSeven} />
+            <img src={ImgSeven}  alt="Moody"/>
           </Slide>
 
           <Slide index={7}>
-            <img src={ImgEight} />
+            <img src={ImgEight}  alt="Yamuna"/>
           </Slide>
 
           <Slide index={8}>
-            <img src={ImgNine} />
+            <img src={ImgNine}  alt="Nature View"/>
           </Slide>
 
           <Slide index={9}>
-            <img src={ImgTen} />
+            <img src={ImgTen} alt="Yoo hoo" />
           </Slide>
 
           <Slide index={10}>
-            <img src={ImgEleven} />
+            <img src={ImgEleven}  alt="Nature food"/>
           </Slide>
 
         </Slider>
